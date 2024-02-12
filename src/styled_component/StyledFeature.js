@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import heroImg from '../img/image-hero.png';
 import iconCheck from '../img/icon_check.svg';
+import iconCheck2 from '../img/icon_check2.svg';
 
 export const StyledHero = styled.div`
   display: flex;
@@ -36,8 +37,13 @@ export const StyledContent = styled.div`
   line-height: 1.6;
 
   & > section {
-    & > p {
+    margin-bottom: 35px;
+
+    .testList {
       margin-bottom: 20px;
+    }
+
+    & > p {
       &:first-letter {
         font-size: 35px;
         font-family: monospace;
@@ -46,7 +52,6 @@ export const StyledContent = styled.div`
     }
 
     & > .realityList {
-      margin-bottom: 20px;
       & > li {
         display: grid;
         grid-template-columns: 25px 1fr;
@@ -69,6 +74,98 @@ export const StyledContent = styled.div`
 
     & > .letsStart {
       font-weight: 500;
+      margin: 10px 0;
     }
+
+    .priceItemWrapper {
+      padding: 20px;
+      margin: 0 auto;
+      box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+
+      border-radius: 25px;
+      @media (max-width: 768px) {
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+
+      .priceWrapper {
+        & > span:first-child {
+          font-size: 50px;
+          font-weight: 500;
+        }
+
+        & > span:last-child {
+          color: rgb(108, 115, 127);
+        }
+      }
+
+      .priceItemTop {
+        &:after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 1px;
+          background-color: rgb(108, 115, 127);
+          margin: 10px 0;
+        }
+      }
+
+      .priceItemSubtitle {
+        font-weight: 500;
+        font-size: 20px;
+      }
+      .priceItemDesc {
+        font-size: 15px;
+        color: rgb(108, 115, 127);
+      }
+
+      .priceFeaturesList {
+        margin-bottom: 20px;
+        & > li {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          margin-bottom: 10px;
+          &:before {
+            content: '';
+            display: block;
+            width: 25px;
+            height: 25px;
+            background-image: url(${iconCheck2});
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+        }
+      }
+
+      .priceItemButton {
+        border: 1px solid rgb(69, 155, 122);
+        border-radius: 20px;
+        width: 100%;
+        padding: 15px;
+        background: none;
+        font-size: 17px;
+        color: rgb(69, 155, 122);
+        font-weight: 600;
+      }
+
+      .lastPlan {
+        background-color: rgb(69, 155, 122);
+        color: white;
+      }
+    }
+  }
+
+  .sectionTitle {
+    font-weight: 600;
+    font-size: 1.6em;
+    text-align: center;
+  }
+
+  .sectionSubtitle {
+    font-size: 1.6em;
+    text-align: center;
+    margin: 20px 0;
   }
 `;

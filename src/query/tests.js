@@ -13,6 +13,7 @@ export const GET_ALL_TESTS = gql`
       tech_stack
       type
       description_short
+      requires_payment
     }
   }
 `;

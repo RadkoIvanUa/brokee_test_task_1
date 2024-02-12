@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledApp = styled.div`
+export const StyledTests = styled.div`
   & > h2 {
     font-size: 24px;
     text-align: center;

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useQuery } from '@apollo/client';
 import { GET_ALL_TESTS } from '../query/tests';
 import { StyledContainer } from '../styled_component/StyledContainer';
-import { StyledApp } from '../styled_component/StyledApp';
+import { StyledTests } from '../styled_component/StyledTests';
 import { Link } from 'react-router-dom';
 import Feature from './Feature';
 
@@ -13,13 +13,11 @@ function Tests() {
 
   useEffect(() => {
     !loading && setTests(data.tests);
-
-    console.log(data);
   }, [data]);
 
   return (
     <StyledContainer>
-      <StyledApp>
+      <StyledTests>
         <Link to="/feature">Introducing Pricing Plans</Link>
 
         <h2>Check out our tests for popular cloud-native technologies</h2>
@@ -47,7 +45,7 @@ function Tests() {
             </li>
           ))}
         </ul>
-      </StyledApp>
+      </StyledTests>
     </StyledContainer>
   );
 }
