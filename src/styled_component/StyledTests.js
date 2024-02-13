@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledTests = styled.div`
+export const StyledTests = styled.section`
   & > h2 {
     font-size: 24px;
     text-align: center;
@@ -23,7 +23,7 @@ export const StyledTests = styled.div`
       margin: 0 auto;
       box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
 
-      border-radius: 25px;
+      border-radius: 15px;
       @media (max-width: 768px) {
         &:not(:last-child) {
           margin-bottom: 20px;
