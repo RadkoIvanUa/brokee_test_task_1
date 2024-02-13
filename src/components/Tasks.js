@@ -15,13 +15,13 @@ import useWindowDimensions from '../hooks/getWindowDimensions';
 
 function Tests() {
   const [tests, setTests] = useState([]);
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
-  const { data, loading, error } = useQuery(GET_ALL_TESTS);
+  const { data, loading } = useQuery(GET_ALL_TESTS);
 
   useEffect(() => {
     !loading && setTests(data.tests);
-  }, [data]);
+  }, [data, loading]);
 
   return (
     <StyledContainer>
@@ -152,7 +152,7 @@ function Tests() {
                 <p className="itemText">{test.description_short}</p>
               </div>
               <a
-                href="#"
+                href="/"
                 className={
                   (test.status === 'ready' && 'itemButton') ||
                   (test.status === 'upcoming' && ['itemButton', 'disabledBtn'].join(' '))
