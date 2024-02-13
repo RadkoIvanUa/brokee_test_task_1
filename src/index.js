@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
-import { BrowserRouter } from 'react-router-dom';
 
 const client = new ApolloClient({
   uri: 'https://graph.brokee.io/v1/graphql?q=GetTests',
